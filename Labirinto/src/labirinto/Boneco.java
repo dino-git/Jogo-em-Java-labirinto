@@ -5,7 +5,7 @@ import java.awt.Image;
 import java.awt.Rectangle;
 
 public class Boneco {
-    int x, y;
+    public int x, y;
     boolean movimento;
     Labirinto labirinto;
     Labirinto2 labirinto2;
@@ -38,6 +38,7 @@ public class Boneco {
         if(x<0)x =0;
         if (EmColisão()) x+=15;
         sprite.esquerda();
+        System.out.println(x + " " + y);
     }
     
     public void direita() {
@@ -46,6 +47,7 @@ public class Boneco {
         if(x>labirinto.p.getWidth()- sprite.getWidth())x=labirinto.p.getWidth()- sprite.getWidth();
         if (EmColisão()) x-=15;
         sprite.direita();
+        System.out.println(x + " " + y);
     }
     
     public void cima() {
