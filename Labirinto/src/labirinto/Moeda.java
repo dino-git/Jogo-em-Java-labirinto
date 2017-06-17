@@ -6,10 +6,6 @@ public class Moeda extends Colecionavel{
         super(x,y,lab);
         img = Labirinto.lerImagem("moeda.png");
     }
-    public Moeda(int x, int y, Labirinto2 lab){
-        super(x,y,lab);
-        img = Labirinto.lerImagem("moeda.png");
-    }
     
     
 }

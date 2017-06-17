@@ -7,24 +7,30 @@ package labirinto;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 
 /**
  *
- * @author a21606839
+ * @author aulas
  */
-public class Colecionavel {
-    Image img;
+public class NextScene {
+    Image img = Labirinto.lerImagem("chave.png");
     int x, y;
     Labirinto labirinto;
+    Labirinto2 labirinto2;
     
-    public Colecionavel(int x, int y, Labirinto lab){
+    public NextScene(int x, int y, Labirinto lab){
         this.x = x;
         this.y = y;
         labirinto = lab;
     }
     
+    public Rectangle getRectangle() {
+        Rectangle r = new Rectangle(x,y,img.getWidth(labirinto),img.getHeight(labirinto));
+        return r;
+    }
+        
     public void desenha(Graphics g) {
         g.drawImage(img, x, y, labirinto.p);
     }
-    
 }
